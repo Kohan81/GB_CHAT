@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gb_chat.ChatController">
+    <top>
+        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Online chat GeekBrains" BorderPane.alignment="CENTER" />
+    </top>
+    <bottom>
+        <HBox prefHeight="25.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="messageField" onAction="#appendMessageToChat" prefHeight="26.0" prefWidth="558.0">
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </HBox.margin>
+                </TextField>
+                <Button fx:id="sendMessageButton" mnemonicParsing="false" onAction="#appendMessageToChat" prefHeight="26.0" prefWidth="105.0" text="Send">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin></Button>
+            </children>
+        </HBox>
+    </bottom>
+    <left>
+        <ListView fx:id="userList" prefHeight="357.0" prefWidth="125.0" BorderPane.alignment="CENTER" />
+    </left>
+    <center>
+        <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+    </center>
+    <right>
+        <VBox prefHeight="357.0" prefWidth="472.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextArea fx:id="messageTExtArea" editable="false" prefHeight="360.0" prefWidth="472.0" />
+                <Separator halignment="RIGHT" prefHeight="0.0" prefWidth="472.0" valignment="BOTTOM" />
+            </children>
+        </VBox>
+    </right>
+</BorderPane>

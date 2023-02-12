@@ -14,7 +14,7 @@
     <bottom>
         <HBox prefHeight="25.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField fx:id="messageField" onAction="#appendMessageToChat" prefHeight="26.0" prefWidth="558.0">
+                <TextField fx:id="textField" onAction="#send_Message" prefHeight="26.0" prefWidth="558.0">
                     <cursor>
                         <Cursor fx:constant="DEFAULT" />
                     </cursor>
@@ -22,7 +22,7 @@
                         <Insets left="5.0" right="5.0" />
                     </HBox.margin>
                 </TextField>
-                <Button fx:id="sendMessageButton" mnemonicParsing="false" onAction="#appendMessageToChat" prefHeight="26.0" prefWidth="105.0" text="Send">
+                <Button fx:id="button" mnemonicParsing="false" onAction="#send_Message" prefHeight="26.0" prefWidth="105.0" text="Send">
                     <HBox.margin>
                         <Insets right="5.0" />
                     </HBox.margin></Button>
@@ -38,7 +38,7 @@
     <right>
         <VBox prefHeight="357.0" prefWidth="472.0" BorderPane.alignment="CENTER">
             <children>
-                <TextArea fx:id="messageTExtArea" editable="false" prefHeight="360.0" prefWidth="472.0" />
+                <TextArea fx:id="textArea" editable="false" prefHeight="360.0" prefWidth="472.0" />
                 <Separator halignment="RIGHT" prefHeight="0.0" prefWidth="472.0" valignment="BOTTOM" />
             </children>
         </VBox>
